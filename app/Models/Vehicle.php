@@ -16,6 +16,11 @@ class Vehicle extends Model
 
     public function categories()
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        return $this->belongsTo(Category::class);
+    }
+
+    public function rides()
+    {
+        return $this->hasMany(Ride::class);
     }
 }

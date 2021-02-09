@@ -17,8 +17,8 @@ class CreateRidesTable extends Migration
             $table->id();
             $table->foreignId('driver_id')->constrained('drivers')->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('customer_id')->constrained('customers')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('vehicles_id')->constrained('vehicles')->onUpdate('cascade')->onDelete('cascade');
-            $table->decimal("fee",8,2);
+            $table->foreignId('vehicle_id')->constrained('vehicles')->onUpdate('cascade')->onDelete('cascade');
+            $table->decimal("fee", 8, 2);
             $table->tinyInteger("canceled");
             $table->date("date");
             $table->timestamps();
